@@ -5,19 +5,14 @@
 /.pnp
 .pnp.js
 
-# testing
-/coverage
-
 # production
 /build
 
-# misc
+# mac
 .DS_Store
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
 
-npm-debug.log*
+
+# yarn
+yarn.lock
 yarn-debug.log*
 yarn-error.log*
