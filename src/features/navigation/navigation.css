@@ -1,0 +1,107 @@
+/* NavBar */
+.nav-bar-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  z-index: 5;
+  background-color: var(--blue-dark);
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.nav-bar-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  width: calc(100% - 20px);
+  max-width: calc(var(--width) - 20px);
+  height: 50px;
+}
+
+.nav-bar-content > span {
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0px auto 0px 10px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* NavDrawer */
+.nav-drawer-container {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  flex-direction: row;
+  display: flex;
+  z-index: 100;
+  overflow: hidden;
+  white-space: nowrap;
+  transition: 0.3s;
+}
+.nav-drawer-container-hidden {
+  z-index: -1;
+}
+
+.nav-drawer-menu {
+  width: 75%;
+  max-width: 500px;
+  left: 0;
+  transition: 0.35s;
+  background-color: #d9effb;
+  overflow: hidden;
+  box-shadow: 1px 0px 0px 0px black;
+  box-sizing: border-box;
+}
+.nav-drawer-menu.nav-drawer-hidden {
+  margin-left: -75%;
+  box-shadow: 1px 0px 0px 0px rgba(0, 0, 0, 0);
+}
+
+.nav-drawer-outside {
+  position: relative;
+  cursor: pointer;
+  border: none;
+  display: inline-block;
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  flex: 1;
+  transition: background-color 0.3s;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 14;
+}
+.nav-drawer-outside.nav-drawer-outside-hidden {
+  background-color: rgba(0, 0, 0, 0);
+  cursor: default;
+}
+
+/* NavDrawerUser */
+.nav-drawer-user {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: var(--dark-grey);
+  height: 65px;
+  width: 100%;
+  box-sizing: border-box;
+  cursor: pointer;
+  border: none;
+  padding: 0px 12px;
+}
+
+.nav-drawer-username {
+  margin-left: 10px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--white);
+}

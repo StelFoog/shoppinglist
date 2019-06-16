@@ -1,0 +1,62 @@
+.button-container {
+  position: relative;
+  cursor: pointer;
+  border: none;
+  display: inline-block;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  margin: 0px;
+  padding: 0px;
+}
+
+/* Icon Square */
+.button-icon-square {
+  background-color: rgba(0, 0, 0, 0);
+  padding: 4px 5px;
+}
+.button-icon-square:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.button-icon-square:focus {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.button-icon-square:active {
+  background-color: rgba(0, 0, 0, 0.35);
+}
+
+/* Filled */
+.button-filled {
+  padding: 10px 12px;
+  border-radius: 3px;
+  font-size: 16px;
+  font-weight: 600;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+.button-filled:hover {
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+.button-filled:focus {
+  filter: brightness(120%);
+}
+.button-filled:active {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  filter: brightness(90%);
+}
+
+/* Text */
+.button-text {
+  padding: 10px 12px;
+  border-radius: 3px;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: rgba(0, 0, 0, 0);
+}
+.button-text:hover {
+  background-color: rgba(0, 0, 0, 0.08);
+}
+.button-text:focus {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.button-text:active {
+  background-color: rgba(0, 0, 0, 0.16);
+}
