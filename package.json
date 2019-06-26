@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "base63": "^2.0.1",
+    "base62": "^2.0.1",
     "firebase": "^6.0.4",
     "history": "^4.9.0",
     "prop-types": "^15.7.2",

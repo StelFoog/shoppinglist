@@ -2,6 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 // Components
 import NavDrawerUser from "./NavDrawerUser";
+import NavDrawerList from "./NavDrawerList";
+import NavDrawerBottom from "./NavDrawerBottom";
 
 const NavDrawer = ({ currentPage, showDrawer, toggleDrawer }) => (
   <div
@@ -13,11 +15,13 @@ const NavDrawer = ({ currentPage, showDrawer, toggleDrawer }) => (
       className={`nav-drawer-menu${!showDrawer ? " nav-drawer-hidden" : ""}`}
     >
       <NavDrawerUser />
+      <NavDrawerList />
+      <NavDrawerBottom />
     </div>
     <button
       type="button"
-      className={`nav-drawer-outside${
-        !showDrawer ? " nav-drawer-outside-hidden" : ""
+      className={`nav-drawer-outside ${
+        !showDrawer ? "nav-drawer-outside-hidden" : ""
       }`}
       onClick={toggleDrawer}
     />
