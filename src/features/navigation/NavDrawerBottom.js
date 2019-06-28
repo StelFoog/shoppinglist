@@ -6,9 +6,21 @@ const NavDrawerBottom = () => (
   <React.Fragment>
     <div className="horizontal-divider" />
     <div className="nav-drawer-bottom">
-      <div className="nav-drawer-bottom-content">Search</div>
+      <button
+        type="button"
+        className="nav-drawer-bottom-content"
+        onClick={() => {}}
+      >
+        Search
+      </button>
       <div className="vertical-divider" />
-      <div className="nav-drawer-bottom-content">New List</div>
+      <button
+        type="button"
+        className="nav-drawer-bottom-content"
+        onClick={() => {}}
+      >
+        New List
+      </button>
     </div>
   </React.Fragment>
 );
