@@ -15,8 +15,8 @@ const NavDrawer = ({ currentPage, showDrawer, toggleDrawer }) => (
       className={`nav-drawer-menu${!showDrawer ? " nav-drawer-hidden" : ""}`}
     >
       <NavDrawerUser />
-      <NavDrawerList />
-      <NavDrawerBottom />
+      <NavDrawerList toggleDrawer={toggleDrawer} />
+      <NavDrawerBottom toggleDrawer={toggleDrawer} />
     </div>
     <button
       type="button"
@@ -29,7 +29,7 @@ const NavDrawer = ({ currentPage, showDrawer, toggleDrawer }) => (
 );
 
 NavDrawer.propTypes = {
-  currentPage: PropTypes.string.isRequired
+  currentPage: PropTypes.object.isRequired
 };
 
 export default NavDrawer;

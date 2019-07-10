@@ -1,13 +1,14 @@
 import { storage } from "./store";
 
 export const initialState = {
+  restored: false,
   user: null,
-  restored: false
+  shoppinglists: {}
 };
 
 export const reducer = (state, action) => {
   let nextState = { ...state };
-  const { type, user, restoredState } = action;
+  const { type, user, restoredState, shoppinglist } = action;
   switch (type) {
     case "RESTORE_STATE":
       nextState = restoredState;
@@ -19,6 +20,14 @@ export const reducer = (state, action) => {
 
     case "SIGN_IN_USER":
       nextState = { ...nextState, user };
+      break;
+
+    case "UPDATE_USER":
+      nextState = { ...nextState, user };
+      break;
+
+    case "ADD/UPDATE_SHOPPINGLIST":
+      nextState.shoppinglists[shoppinglist.uid] = shoppinglist;
       break;
 
     default:

@@ -6,7 +6,7 @@ const blankUser = {
   email: "",
   authType: "",
   picture: "",
-  lists: {},
+  lists: [],
   invitations: {}
 };
 
@@ -22,3 +22,12 @@ export const createUser = async userData => {
   await getUserRef(user.uid).set(user);
   return user;
 };
+
+export const updateUser = async user => {
+  await getUserRef(user.uid).set(user);
+};
+
+export const listenToUser = (uid, callback) =>
+  getUserRef(uid).onSnapshot(doc => {
+    callback(doc.data());
+  });

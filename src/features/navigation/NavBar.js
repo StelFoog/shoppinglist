@@ -7,10 +7,9 @@ import { Menu, Info } from "../icons";
 // Style
 import "./navigation.css";
 
-import { useStateValue } from "../../store";
+import history from "../../history";
 
 const NavBar = ({ navText, toggleDrawer }) => {
-  const [state] = useStateValue();
   return (
     <div className="nav-bar-container">
       <div className="nav-bar-content">
@@ -21,7 +20,7 @@ const NavBar = ({ navText, toggleDrawer }) => {
         <Button
           variant="iconSquare"
           onClick={() => {
-            console.log(state);
+            history.push("/");
           }}
         >
           <Info size={36} color="white" />
